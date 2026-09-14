@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Manager - FeedbackHub</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <h2>Feedback<span>Hub</span></h2>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="feedbacks.html">All Feedback</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="box">
+        <div class="box-1">
+          <span class="body">Student Platform</span>
+          <h1>Student Feedback Manager</h1>
+          <p>Your insights directly inform platform updates and improve the learning experience for everyone.</p>
+        </div>
+      </section>
+
+      <section class="feedback-section">
+        <div class="container">
+          <div class="form-header">
+            <h2>Share Your Feedback</h2>
+            <p>Please complete the fields below to submit your review.</p>
+          </div>
+
+          <form id="form">
+            <div class="forms">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="e.g., Saniya Sheikh"
+                required
+              />
+            </div>
+
+            <div class="forms">
+              <label for="comments">Your Comments</label>
+              <textarea
+                name="comments"
+                id="comments"
+                placeholder="Enter detailed comments on your experience..."
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <div class="forms">
+              <label for="rating">Rate Your Experience</label>
+              <select id="rating" name="rating" required>
+                <option value="">Select your rating</option>
+                <option value="5">Excellent — 5</option>
+                <option value="4">Very Good — 4</option>
+                <option value="3">Good — 3</option>
+                <option value="2">Average — 2</option>
+                <option value="1">Poor — 1</option>
+              </select>
+            </div>
+            <div id="nameError"></div>
+            <div id="commentError"></div>
+            <div id="ratingError"></div>
+            <button type="submit" id="submitBtn">Submit Feedback</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footers">
+          <div>
+            <h3>FeedbackHub</h3>
+            <p>Empowering students to shape better learning experiences through structured, actionable feedback.</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 FeedbackHub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
