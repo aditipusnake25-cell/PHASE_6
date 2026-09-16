@@ -2,11 +2,7 @@ import Feedback from "../models/feedbackModel.js";
 
 const addFeedback = async (req, res) => {
   try {
-    const newFeedback = new Feedback({
-      name: req.body.name,
-      feedback: req.body.feedback,
-      rating: req.body.rating
-    });
+    const newFeedback = new Feedback(req.body);
 
     await newFeedback.save();
 

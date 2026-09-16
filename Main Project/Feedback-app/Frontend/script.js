@@ -1,45 +1,46 @@
+
 let body = document.body;
 let form = document.getElementById("form");
 let nameValue = document.getElementById("name");
 let commentsValue = document.getElementById("comments");
 let ratingValue = document.getElementById("rating");
-let emptyName = document.getElementById("nameError");
 let emptyComment = document.getElementById("commentError");
-let emptyRating = document.getElementById("ratingError");
 let submit = document.getElementById("submitBtn");
-
+let emptyName = document.getElementById("nameError")
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  let name = nameValue.value;
-  let comment = commentsValue.value;
-  let rating = ratingValue.value;
-
-  if (!name) {
+  
+  const feedback = {
+    name: nameValue.value,
+    feedback: commentsValue.value,
+    rating: ratingValue.value
+  }
+  if (!feedback.name) {
     emptyName.textContent = "Name is required!";
     return;
   }
   submit.disabled = true;
   try {
-    const response = await fetch("/feedbacks", {
+    const response = await fetch("http://localhost:3000/api/feedback", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        name: name,
-        comment: comment,
-        rating: rating,
-      }),
+      body: JSON.stringify(feedback),
     })
-    
+    const data = await response.json()
+    if(response.ok){
+      emptyComment.textContent="Feedback submitted successfully!"
+      form.reset()
+    }
   } catch (err) {
     console.error(err);
 
     if (err.message === "Failed to fetch") {
-      error.textContent =
+      emptyComment.textContent =
         "Cannot connect to the server. Please make sure the backend is running.";
     } else {
-      error.textContent =
+      emptyComment.textContent =
         err.message || "Something went wrong. Please try again.";
     }
   } finally {

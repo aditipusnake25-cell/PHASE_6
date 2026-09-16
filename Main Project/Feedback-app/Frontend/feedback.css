@@ -1,0 +1,135 @@
+/* Page Background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+}
+
+/* Navbar Box */
+#navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #1e40af;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666666;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.nav-links a.active {
+    color: #1e40af;
+    font-weight: bold;
+}
+
+/* Page Container */
+#main-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+/* Header Text Box */
+.header-box {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tag {
+    background-color: #e0e7ff;
+    color: #1e40af;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+h1 {
+    color: #1e40af;
+    margin: 10px 0 5px 0;
+}
+
+.header-box p {
+    color: #666666;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Target every dynamic feedback box generated inside #result */
+#result > div {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings inside feedback boxes */
+#result h3 {
+    margin: 0 0 8px 0;
+    color: #1e40af;
+    font-size: 18px;
+}
+
+/* Paragraph text inside feedback boxes */
+#result p {
+    margin: 5px 0;
+    color: #444444;
+    font-size: 14px;
+}
+
+.footer{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footers {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.footers h3 {
+  color: #1a365d;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.footers p {
+  font-size: 14px;
+  max-width: 400px;
+}
+
+.footer-links a {
+  color: #4a5568;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #2b6cb0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  padding-top: 15px;
+  color: #a0aec0;
+}
