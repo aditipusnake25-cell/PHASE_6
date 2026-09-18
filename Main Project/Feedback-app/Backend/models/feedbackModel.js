@@ -8,7 +8,7 @@ const feedbackSchema = new mongoose.Schema({
     trim: true
   },
 
-  feedback: {
+  comments: {
     type: String,
     required: true,
     minlength: 5,

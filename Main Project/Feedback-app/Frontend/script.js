@@ -9,10 +9,10 @@ let submit = document.getElementById("submitBtn");
 let emptyName = document.getElementById("nameError")
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  
+
   const feedback = {
     name: nameValue.value,
-    feedback: commentsValue.value,
+    comments: commentsValue.value,
     rating: ratingValue.value
   }
   if (!feedback.name) {
@@ -29,8 +29,8 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify(feedback),
     })
     const data = await response.json()
-    if(response.ok){
-      emptyComment.textContent="Feedback submitted successfully!"
+    if (response.ok) {
+      emptyComment.textContent = "Feedback submitted successfully!"
       form.reset()
     }
   } catch (err) {

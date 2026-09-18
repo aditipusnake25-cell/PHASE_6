@@ -8,7 +8,7 @@ async function getFeedback() {
             <div>
             <h3>${feedback.name}</h3>
             <p>${feedback.rating}</p>
-            <p>${feedback.feedback}</p>
+            <p>${feedback.comments}</p>
             `
 
         });
