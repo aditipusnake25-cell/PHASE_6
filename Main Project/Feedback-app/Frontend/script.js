@@ -34,7 +34,7 @@ form.addEventListener("submit", async (e) => {
       form.reset()
     }
   } catch (err) {
-    console.error(err);
+    // console.error(err);
 
     if (err.message === "Failed to fetch") {
       emptyComment.textContent =
